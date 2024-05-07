@@ -1,34 +1,33 @@
 public class PalindromString
 {
-
-    /**
-     * @param args
-     */
     public static void main(String args[])
     {
 
 
-        StringBuffer s = new StringBuffer("kayak");
+        String str = "kayak";
 
-        StringBuffer str = new StringBuffer(s);
-        
-        StringBuffer rev = new StringBuffer(s.reverse());
+        String rev = "";
 
+        char [] chArr = str.toCharArray();
+
+        for(int i=0;i<chArr.length;i++)
+        {
+            rev = chArr[i] + rev;
+        }
 
         System.out.println(str);
         System.out.println(rev);
 
-
-
         if(str.equals(rev))
         {
-            System.out.println("String is palindrom");
+            System.out.println("String is Palindrom");
         }
         else
         {
-
-            System.out.println("String is not palindrom");
+            System.out.println("String is not Palindrom");
         }
+
+
     }
 
 }
